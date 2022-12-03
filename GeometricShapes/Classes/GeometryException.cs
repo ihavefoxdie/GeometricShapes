@@ -17,7 +17,7 @@ namespace GeometricShapes.Classes
 
         public GeometryException(string message) : base(message)
         {
-
+        
         }
 
         public GeometryException(string message, Exception inner) : base(message, inner)

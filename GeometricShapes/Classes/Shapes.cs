@@ -8,8 +8,10 @@ using System.Windows.Markup;
 
 namespace Shapes
 {
+    
     public class Triangle
     {
+
         public Int32[] Sides
         {
             get;
@@ -18,7 +20,7 @@ namespace Shapes
         public Triangle(Int32 a, Int32 b, Int32 c)
         {
             Sides = new int[] {a, b, c};
-            if(!Check())
+            if (!Check())
                 throw new TriangleException("Triangle cannot be built with set side lengths.", Sides);
                 
         }
@@ -40,7 +42,7 @@ namespace Shapes
             get;
             private set;
         }
-        private Quadrangle(Int32 a, Int32 b, Int32 c, Int32 d)
+        public Quadrangle(Int32 a, Int32 b, Int32 c, Int32 d)
         {
             Sides = new int[] { a, b, c, d};
             if (!Check())
