@@ -8,15 +8,14 @@ using System.Windows.Markup;
 
 namespace Shapes
 {
-    
     public class Triangle
     {
-
         public Int32[] Sides
         {
             get;
             private set;
         }
+
         public Triangle(Int32 a, Int32 b, Int32 c)
         {
             Sides = new int[] {a, b, c};
@@ -32,8 +31,9 @@ namespace Shapes
                 return true;
             return false;
         }
-
     }
+
+
 
     public class Quadrangle
     {
@@ -42,6 +42,7 @@ namespace Shapes
             get;
             private set;
         }
+
         public Quadrangle(Int32 a, Int32 b, Int32 c, Int32 d)
         {
             Sides = new int[] { a, b, c, d};
@@ -57,6 +58,8 @@ namespace Shapes
             return false;
         }
     }
+
+
 
     public class Circle
     {

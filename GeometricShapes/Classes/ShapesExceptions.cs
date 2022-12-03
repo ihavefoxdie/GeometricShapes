@@ -36,6 +36,8 @@ namespace GeometricShapes.Classes
         }
     }
 
+
+
     [Serializable]
     public class QuadrangleException : GeometryException
     {
@@ -63,6 +65,8 @@ namespace GeometricShapes.Classes
         {
         }
     }
+
+
 
     [Serializable]
     public class CircleException : GeometryException

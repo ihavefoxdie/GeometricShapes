@@ -21,6 +21,7 @@ namespace Testing
             w.WriteLine("-------------------------------\n");
             w.Close();
         }
+
         static void Print(GeometryException e)
         {
             DirectoryInfo _ = Directory.CreateDirectory(Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "\\Logs");
@@ -34,13 +35,16 @@ namespace Testing
             StreamWriter w = File.AppendText(Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "\\Logs\\logCircle.txt");
             ActualPrint(e, w);
         }
+
+
+
         static void Main()
         {
             Random rand = new();
-
             
             for (int i = 0; i < 10; i++)
             {
+                //Triangle
                 try
                 {
                     Triangle triangle = new(rand.Next(100), rand.Next(100), rand.Next(100));
@@ -50,6 +54,7 @@ namespace Testing
                     Print(ex);
                 }
 
+                //Quadrangle
                 try
                 {
                     Quadrangle quadrangle = new(rand.Next(100), rand.Next(100), rand.Next(100), rand.Next(100));
@@ -59,6 +64,7 @@ namespace Testing
                     Print(ex);
                 }
 
+                //Circle
                 try
                 {
                     Circle circle = new(rand.Next(-50, 100));
@@ -69,8 +75,6 @@ namespace Testing
                     PrintCircle(ex);
                 }
             }
-
-
         }
     }
 }

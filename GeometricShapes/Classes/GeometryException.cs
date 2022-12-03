@@ -37,17 +37,11 @@ namespace GeometricShapes.Classes
 
         protected GeometryException(SerializationInfo info, StreamingContext context) : base(info, context)
         {
-
-            //Parameters = new Int32[info.];
-
-            /*for (int i = 0; i < info.MemberCount; i++)
-                Parameters[i] = info.GetInt32(i.ToString());*/
             Parameters = new Int32[info.GetInt32("Parameters Size")];
             for (int i = 0; i < Parameters.Length; i++)
             {
                 Parameters[i] = info.GetInt32("Parameter " + i.ToString());
             }
-
         }
 
         public override void GetObjectData(SerializationInfo info, StreamingContext context)
